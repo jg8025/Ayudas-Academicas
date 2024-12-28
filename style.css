@@ -1,13 +1,38 @@
+:root {
+    --fondo-principal: #f8f9fa; /* Gris claro */
+    --texto-principal: #343a40; /* Gris oscuro */
+    --boton-fondo: #007bff; /* Azul */
+    --boton-texto: #ffffff; /* Blanco */
+    --boton-hover: #0056b3; /* Azul más oscuro */
+}
+/* Estilos para el encabezado fijo */
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--fondo-principal);
+    z-index: 1000; /* Asegura que el encabezado esté encima de otros elementos */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    border-bottom: 1px solid #ddd; /* Línea sutil debajo del encabezado */
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--texto-principal);
+}
+header p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
 /*Estilo general*/
-body{
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
-
 /*Encabezados*/
 h1{
     color: #0056b3;
@@ -16,12 +41,10 @@ h1{
     background-color: #e8f0fe;
     margin: 0;
 }
-
 h2{
     color: #333;
     margin-top: 20px;
 }
-
 /*Listas*/
 ul{
     background: #fff;
@@ -29,21 +52,17 @@ ul{
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 ul li{
     margin: 10px 0;
 }
-
 /*Enlace de contacto*/
 a{
     color: #0056b3;
     text-decoration: none;
 }
-
 a:hover{
     text-decoration: underline;
 }
-
 /*Imagen*/
 img{
     display: block;
@@ -51,3 +70,102 @@ img{
     max-width: 100%;
     height: auto;
 }
+/* Estilos para el botón de contacto */
+button {
+    padding: 10px 20px;
+    background-color: var(--boton-fondo);
+    color: var(--boton-texto);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+button:hover {
+    background-color: var(--boton-hover);
+}
+/*Estilo para la barra de navegación */
+nav{
+    background-color: var(--fondo-principal);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*Sombra para darle profundidad */
+    position: sticky;
+    top: 60px;
+    z-index: 1000;
+    padding: 10px 0;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--texto-principal);
+    font-weight: bold;
+    transition: color 0.3s ease; /*Efecto de suavizado al pasar el mouse */
+}
+nav ul li a:hover{
+    color: var(--boton-hover); /* Cambia al azul más oscuro al pasar el mouse */
+}
+/* Estilo para el pie de página */
+footer{
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd; /* Línea sutil para separar el pie de página */
+}
+footer p{
+    margin: 0;
+    font-size: 14px;
+}
+footer ul{
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+footer ul li{
+    margin: 0 10px;
+}
+footer ul li a{
+    text-decoration: none;
+    color: var(--boton-hover); /* Azul más oscuro */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Azul más claro al pasar el mouse */
+}
+/* Diseño para pantallas pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 24px; /* Reducir el tamaño del encabezado */
+    }
+    p {
+        font-size: 16px; /* Reducir el tamaño del texto */
+    }
+    img {
+        width: 80%; /* Las imágenes ocupan el 80% del ancho */
+        height: auto;
+    }
+    ul li {
+        width: 100%; /* Los elementos de la lista ocupan todo el ancho */
+        margin: 10px 0;
+    }
+    footer p {
+        font-size: 14px; /* Texto más pequeño en el pie de página */
+    }
+    footer ul {
+        display: block;
+        text-align: center;
+    }
+    footer ul li {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+}
+

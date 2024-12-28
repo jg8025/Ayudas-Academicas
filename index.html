@@ -4,37 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title> Mi Página Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenido a mi página Web</h1>
-    <p>Tu vida es mas sencilla si buscas ayuda</p>
-    <h2>Servicios que ofrezco</h2>
+    <header>
+        <h1>Bienvenido a mi página Web</h1>
+        <p>Tu vida es más sencilla si buscas ayuda</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+<h2 id="servicios">Nuestros servicios</h2>
 <ul>
-    <ul>
-        <li>Tutorías de matemáticas: nivel básico, intermedio y avanzado.</li>
-        <li><img src="image/asesorias de matematicas.png" alt="Imagen de asesorias de matematicas" style="width: 5cm; height: 5cm;">
-        </li>
+    <li>Tutorías de matemáticas: nivel básico, intermedio y avanzado.</li>
+    <li><img src="image/asesorias de matematicas.jpg" alt="Imagen de asesorias de matematicas" style="width: 5cm; height: 5cm;"loading="lazy"></li>
     
-        <li>Asesorias en proyectos de grado o tésis.</li>
-        <li><img src="image/ayuda con tareas.png" alt="Imagen de ayuda con tareas" style="width: 5cm; height: 5cm;"></li>
+    <li>Asesorias en proyectos de grado o tésis.</li>
+    <li><img src="image/ayuda con tareas.jpg" alt="Imagen de ayuda con tareas" style="width: 5cm; height: 5cm;"loading="lazy"></li>
 
-        <li>Preparación para exámenes importantes.</li>
-        <li><img src="image/preparacion de examenes.png" alt="Imagen de preparacion de examenes" style="width: 5cm; height: 5cm;"></li>
+    <li>Preparación para exámenes importantes.</li>
+    <li><img src="image/preparacion de examenes.jpg" alt="Imagen de preparacion de examenes" style="width: 5cm; height: 5cm;"loading="lazy"></li>
 
-        <li>Clases personalizadas de álgebra, geometría o cálculo.</li>
-        <li><img src="image/tutorias de matematicas.png" alt="Imagen de tutorias de matematicas" style="width: 5cm; height: 5cm;"></li>
+    <li>Clases personalizadas de álgebra, geometría o cálculo.</li>
+    <li><img src="image/tutorias de matematicas.jpg" alt="Imagen de tutorias de matematicas" style="width: 5cm; height: 5cm;"loading="lazy"></li>
 
-        <li>Ayuda con tareas escolares y trabajos académicos</li>
-        <li><img src="image/ayuda academica.png" alt="Imagen de ayuda academica" style="width: 5cm; height: 5cm;"></li>
-    
+    <li>Ayuda con tareas escolares y trabajos académicos</li>
+    <li><img src="image/ayuda academica.jpg" alt="Imagen de ayuda academica" style="width: 5cm; height: 5cm;"loading="lazy"></li>
 </ul>
-<h2>Contacto</h2>
-<p>Si estás interesado en alguno de estos servicios o tienes preguntas, no dudes en escribirme:</p>
-<button onclick="location.href='mailto:jger805@outlook.com'" 
-        style="padding: 10px 20px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer;">
-    Escríbeme ahora
+
+<h2 id="contacto">Contacto</h2>
+<p>Si estás interesado en alguno de estos servicios o tienes preguntas, no dudes en escribirnos:</p>
+<button onclick="location.href='mailto:jger805@outlook.com'">
+    Contactar ahora
 </button>
 
+<footer>
+    <p>&copy; 2024 Ayudas Académicas.<br>Todos los derechos reservados.</p>
+    <ul>
+        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://www.Instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://www.twitter.com" target="_blank">Twiter</a></li>
+    </ul>
+</footer>
 </body>
 </html>
