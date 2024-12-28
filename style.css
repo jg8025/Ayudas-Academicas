@@ -1,0 +1,53 @@
+/*Estilo general*/
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/*Encabezados*/
+h1{
+    color: #0056b3;
+    text-align: center;
+    padding: 20px;
+    background-color: #e8f0fe;
+    margin: 0;
+}
+
+h2{
+    color: #333;
+    margin-top: 20px;
+}
+
+/*Listas*/
+ul{
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul li{
+    margin: 10px 0;
+}
+
+/*Enlace de contacto*/
+a{
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/*Imagen*/
+img{
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
