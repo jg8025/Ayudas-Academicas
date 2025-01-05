@@ -1,167 +1,176 @@
+/* Declaración de variables para colores principales */
 :root {
-    --fondo-principal: #f8f9fa; /* Gris claro */
-    --texto-principal: #343a40; /* Gris oscuro */
-    --boton-fondo: #007bff; /* Azul */
-    --boton-texto: #ffffff; /* Blanco */
-    --boton-hover: #0056b3; /* Azul más oscuro */
+    --fondo-principal: #f8f9fa; /* Fondo gris claro */
+    --texto-principal: #343a40; /* Texto gris oscuro */
+    --boton-fondo: #007bff; /* Fondo azul para botones */
+    --boton-texto: #ffffff; /* Texto blanco para botones */
+    --boton-hover: #0056b3; /* Azul más oscuro para hover */
 }
-/* Estilos para el encabezado fijo */
-header {
-    position: sticky;
-    top: 0;
-    background-color: var(--fondo-principal);
-    z-index: 1000; /* Asegura que el encabezado esté encima de otros elementos */
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-    border-bottom: 1px solid #ddd; /* Línea sutil debajo del encabezado */
-}
-header h1 {
-    margin: 0;
-    font-size: 24px;
-    color: var(--texto-principal);
-}
-header p {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
-}
-/*Estilo general*/
-body {
-    font-family: 'Poppins', sans-serif;
 
-/*Encabezados*/
-h1{
-    color: #0056b3;
-    text-align: center;
-    padding: 20px;
-    background-color: #e8f0fe;
-    margin: 0;
+/* Estilos generales para el cuerpo */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente principal */
+    background-color: var(--fondo-principal); /* Fondo general */
+    color: var(--texto-principal); /* Color del texto */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin relleno */
 }
-h2{
-    color: #333;
-    margin-top: 20px;
+
+/* Estilo para el encabezado */
+header {
+    position: sticky; /* Fijo en la parte superior */
+    top: 0; /* Posición superior */
+    background-color: var(--fondo-principal); /* Fondo gris claro */
+    z-index: 1000; /* Superposición sobre otros elementos */
+    padding: 10px 20px; /* Relleno interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-bottom: 1px solid #ddd; /* Línea inferior */
 }
-/*Listas*/
-ul{
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+header h1 {
+    margin: 0; /* Sin margen */
+    font-size: 24px; /* Tamaño del texto */
+    color: var(--texto-principal); /* Color del texto */
 }
-ul li{
-    margin: 10px 0;
+
+header p {
+    margin: 0; /* Sin margen */
+    font-size: 14px; /* Texto más pequeño */
+    color: #666; /* Gris más claro */
 }
-/*Enlace de contacto*/
-a{
-    color: #0056b3;
-    text-decoration: none;
+
+/* Estilo para la barra de navegación */
+nav {
+    background-color: var(--fondo-principal); /* Fondo gris claro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: sticky; /* Fijo en la parte superior */
+    top: 60px; /* Debajo del encabezado */
+    z-index: 1000; /* Superposición */
+    padding: 10px 0; /* Relleno interno */
 }
-a:hover{
-    text-decoration: underline;
+
+nav ul {
+    display: flex; /* Elementos en línea */
+    justify-content: center; /* Centrado */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin relleno */
+    list-style: none; /* Sin viñetas */
 }
-/*Imagen*/
-img{
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    height: auto;
+
+nav ul li {
+    margin: 0 15px; /* Espaciado horizontal */
 }
-/* Estilos para el botón de contacto */
-button {
-    padding: 10px 20px;
-    background-color: var(--boton-fondo);
-    color: var(--boton-texto);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+
+nav ul li a {
+    text-decoration: none; /* Sin subrayado */
+    color: var(--texto-principal); /* Texto gris oscuro */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s ease; /* Transición suave */
 }
-button:hover {
-    background-color: var(--boton-hover);
-}
-/*Estilo para la barra de navegación */
-nav{
-    background-color: var(--fondo-principal);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*Sombra para darle profundidad */
-    position: sticky;
-    top: 60px;
-    z-index: 1000;
-    padding: 10px 0;
-}
-nav ul{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-nav ul li{
-    margin: 0 15px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: var(--texto-principal);
-    font-weight: bold;
-    transition: color 0.3s ease; /*Efecto de suavizado al pasar el mouse */
-}
-nav ul li a:hover{
-    color: var(--boton-hover); /* Cambia al azul más oscuro al pasar el mouse */
-}
-/* Estilo para el pie de página */
-footer{
-    background-color: var(--fondo-principal);
-    color: var(--texto-principal);
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #ddd; /* Línea sutil para separar el pie de página */
-}
-footer p{
-    margin: 0;
-    font-size: 14px;
-}
-footer ul{
-    list-style: none;
-    margin: 10px 0 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-footer ul li{
-    margin: 0 10px;
-}
-footer ul li a{
-    text-decoration: none;
+
+nav ul li a:hover {
     color: var(--boton-hover); /* Azul más oscuro */
-    font-weight: bold;
-    transition: color 0.3s ease; /* Azul más claro al pasar el mouse */
 }
-/* Diseño para pantallas pequeñas (móviles) */
+
+/* Estilo general para títulos */
+h1, h2 {
+    text-align: center; /* Centrado */
+    color: #0056b3; /* Azul oscuro */
+}
+
+h1 {
+    background-color: #e8f0fe; /* Fondo azul claro */
+    padding: 20px; /* Relleno interno */
+    margin: 0; /* Sin margen */
+}
+
+/* Estilo para la sección de servicios */
+.servicios-contenedor {
+    display: grid; /* Diseño de cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño adaptable */
+    gap: 20px; /* Espaciado entre servicios */
+    max-width: 900px; /* Ancho máximo */
+    margin: 20px auto; /* Centrado */
+    padding: 20px; /* Relleno interno */
+}
+
+.servicio {
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 15px; /* Relleno interno */
+    text-align: center; /* Centrado */
+}
+
+.servicio img {
+    width: 90%; /* Ancho completo */
+    height: auto; /* Mantiene proporción */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.servicio p {
+    margin-top: 10px; /* Espaciado superior */
+    font-size: 14px; /* Texto pequeño */
+    color: #333; /* Gris oscuro */
+}
+
+/* Estilo para la sección Quiénes Somos */
+#quienes-somos {
+    padding: 20px; /* Relleno interno */
+    background-color: #f8f9fa; /* Fondo gris claro */
+    text-align: center; /* Centrado */
+}
+
+#quienes-somos h2 {
+    color: #0056b3; /* Azul oscuro */
+}
+
+#quienes-somos p {
+    font-size: 16px; /* Texto mediano */
+    margin: 10px 0; /* Espaciado vertical */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: var(--fondo-principal); /* Fondo gris claro */
+    color: var(--texto-principal); /* Texto gris oscuro */
+    text-align: center; /* Centrado */
+    padding: 20px 0; /* Relleno interno */
+    border-top: 1px solid #ddd; /* Línea superior */
+}
+
+footer p {
+    margin: 0; /* Sin margen */
+    font-size: 14px; /* Texto pequeño */
+}
+
+footer ul {
+    list-style: none; /* Sin viñetas */
+    margin: 10px 0 0; /* Espaciado superior */
+    padding: 0; /* Sin relleno */
+    display: flex; /* Elementos en línea */
+    justify-content: center; /* Centrado */
+}
+
+footer ul li {
+    margin: 0 10px; /* Espaciado horizontal */
+}
+
+footer ul li a {
+    text-decoration: none; /* Sin subrayado */
+    color: var(--boton-hover); /* Azul más oscuro */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo para dispositivos móviles */
 @media screen and (max-width: 767px) {
-    h1 {
-        font-size: 24px; /* Reducir el tamaño del encabezado */
+    .servicios-contenedor {
+        grid-template-columns: repeat(1, 1fr); /* Una columna */
     }
-    p {
-        font-size: 16px; /* Reducir el tamaño del texto */
+
+    nav ul {
+        flex-direction: column; /* Menú vertical */
+        align-items: center; /* Centrado */
     }
-    img {
-        width: 80%; /* Las imágenes ocupan el 80% del ancho */
-        height: auto;
-    }
-    ul li {
-        width: 100%; /* Los elementos de la lista ocupan todo el ancho */
-        margin: 10px 0;
-    }
-    footer p {
-        font-size: 14px; /* Texto más pequeño en el pie de página */
-    }
-    footer ul {
-        display: block;
-        text-align: center;
-    }
-    footer ul li {
-        display: inline-block;
-        margin: 5px 10px;
-    }
-}
 }
