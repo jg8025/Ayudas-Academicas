@@ -100,5 +100,23 @@
             <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
         </ul>
     </footer>
+
+    <script>
+        // Función para limpiar datos maliciosos
+        function sanitizeInput(input) {
+            const temp = document.createElement('div');
+            temp.textContent = input;
+            return temp.innerHTML;
+        }
+    
+        // Ejemplo de uso en un formulario
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const userInput = document.querySelector('input[name="nombre"]').value;
+            const safeInput = sanitizeInput(userInput);
+            console.log("Datos seguros:", safeInput);
+        });
+    </script>
 </body>
 </html>
