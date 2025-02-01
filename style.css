@@ -6,6 +6,9 @@
     --boton-texto: #ffffff; /* Texto blanco para botones */
     --boton-hover: #0056b3; /* Azul más oscuro para hover */
 }
+.mostrar {
+    display: block !important;
+}
 
 /* Estilos generales para el cuerpo */
 body {

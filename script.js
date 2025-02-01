@@ -5,11 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (serviciosLink && listaServicios) {
         serviciosLink.addEventListener("click", function (event) {
             event.preventDefault();
-            if (listaServicios.style.display === "none" || listaServicios.style.display === "") {
-                listaServicios.style.display = "block";
-            } else {
-                listaServicios.style.display = "none";
-            }
+            listaServicios.classList.toggle("mostrar");
         });
     }
 });
