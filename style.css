@@ -156,6 +156,7 @@ li a{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    
 }
 
 /* Estilo para el botón */
@@ -171,6 +172,11 @@ li a{
     transition: background 0.3s ease, transform 0.2s;
 }
 
+/* Efecto hover */
+.contacto-boton:hover{
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
 
 footer ul li {
     margin: 0 10px; /* Espaciado horizontal */
