@@ -142,6 +142,36 @@ footer ul {
     justify-content: center; /* Centrado */
 }
 
+li{
+    list-style: none;
+}
+
+li a{
+    text-decoration: none;
+}
+
+/* Estilo para el botón de contacto */
+.contacto-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilo para el botón */
+.contacto-boton{
+    display: inline-block;
+    background-color: #ffa500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+
 footer ul li {
     margin: 0 10px; /* Espaciado horizontal */
 }
