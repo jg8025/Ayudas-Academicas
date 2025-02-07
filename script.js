@@ -9,3 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let botonInscribirse = document.querySelector(".microsoft365-button");
+    
+    if (botonInscribirse) {
+        botonInscribirse.addEventListener("click", function (event) {
+            alert("¡Estás a punto de inscribirte en el curso de Microsoft 365!");
+        });
+    }
+});
+
