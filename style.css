@@ -201,7 +201,7 @@ footer ul li a {
   
     .image-header {  
         width: 10%;  /* Reduce aún más el tamaño */
-        max-width: 50px;  /* Limita el tamaño máximo */
+        max-width: 40px;  /* Limita el tamaño máximo */
         position: absolute;
         top: 5px;  /* Ajusta la posición superior */
         right: 5px;  /* Reduce el margen derecho */
