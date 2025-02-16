@@ -198,16 +198,16 @@ footer ul li a {
         flex-direction: column; /* Menú vertical */
         align-items: center; /* Centrado */
     }
-}
-@media (max-width: 768px) {  
-    .imagen-curso {  
-        width: 50%;  /* Reduce el tamaño al 50% del contenedor */
-        max-width: 150px;  /* Limita el tamaño máximo */
+  
+    .image-header {  
+        width: 20%;  /* Reduce aún más el tamaño */
+        max-width: 80px;  /* Limita el tamaño máximo */
         position: absolute;
-        top: 10px;  /* Ajusta la posición superior */
-        right: 10px;  /* Mantiene la imagen en la esquina derecha */
+        top: 5px;  /* Ajusta la posición superior */
+        right: 5px;  /* Reduce el margen derecho */
     }  
 }
+
 
 #lista-servicios {
     display: none;
