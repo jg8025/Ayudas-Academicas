@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pago del Curso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Pago del Curso</h2>
+    <p id="cursoInfo"></p>
+    <button id="pagar-btn">Pagar Ahora</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let usuario = JSON.parse(localStorage.getItem("usuario"));
+            let cursoInfo = document.getElementById("cursoInfo");
+
+            if (usuario) {
+                cursoInfo.textContent = `Estás pagando el curso: ${usuario.curso}`;
+            }
+
+            document.getElementById("pagar-btn").addEventListener("click", function () {
+                alert("Pago realizado con éxito");
+                window.location.href = "curso.html";
+            });
+        });
+    </script>
+</body>
+</html>
