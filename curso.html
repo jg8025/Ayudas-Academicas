@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Disponible</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Material del Curso</h2>
+    <p id="cursoDescarga"></p>
+    <a id="descargar-pdf" href="#" download>Descargar Material</a>
+    <br><br>
+    <button id="finalizar-curso">Finalizar Curso</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let usuario = JSON.parse(localStorage.getItem("usuario"));
+            let cursoDescarga = document.getElementById("cursoDescarga");
+            let linkPDF = document.getElementById("descargar-pdf");
+
+            if (usuario) {
+                cursoDescarga.textContent = `Aquí tienes el material de: ${usuario.curso}`;
+                linkPDF.href = "Curso-gestion-administrativa.pdf"; // Se Debe tener un PDF por curso
+            }
+
+            document.getElementById("finalizar-curso").addEventListener("click", function () {
+                alert("¡Curso finalizado!");
+                window.location.href = "diploma.html";
+            });
+        });
+    </script>
+</body>
+</html>
