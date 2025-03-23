@@ -20,8 +20,25 @@
 
             if (usuario) {
                 cursoDescarga.textContent = `Aquí tienes el material de: ${usuario.curso}`;
-                linkPDF.href = "Curso-gestion-administrativa.pdf"; // Se Debe tener un PDF por curso
-                linkPDF.href = "Curso-microsoft-365.pdf"; // Se Debe tener un PDF por curso
+
+                // Verifica el curso y asigna el PDF correcto
+                if (usuario.curso === "administracion") {
+                    linkPDF.href = "Curso-gestion-administrativa.pdf";
+                } else if (usuario.curso === "Microsoft 365") {
+                    linkPDF.href = "Curso-microsoft-365.pdf";
+                } else if (usuario.curso === "Office"){
+                    linkPDF.href = "curso-office.pdf";
+
+                }else {
+                    // Si el curso no coincide con ninguno, deshabilita el link
+                    linkPDF.href = "#";
+                    linkPDF.textContent = "Material no disponible";
+                    linkPDF.style.pointerEvents = "none";
+                    linkPDF.style.color = "gray";
+                }
+            } else {
+                cursoDescarga.textContent = "No se encontró información del curso.";
+                linkPDF.style.display = "none";
             }
 
             document.getElementById("finalizar-curso").addEventListener("click", function () {
