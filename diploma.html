@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diploma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>¡Felicidades!</h2>
+    <p id="nombre-diploma"></p>
+    <a id="descargar-diploma" href="#" download>Descargar Diploma</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let usuario = JSON.parse(localStorage.getItem("usuario"));
+            let nombreDiploma = document.getElementById("nombre-diploma");
+            let linkDiploma = document.getElementById("descargar-diploma");
+
+            if (usuario) {
+                nombreDiploma.textContent = `¡${usuario.nombre}, has completado el curso de ${usuario.curso}!`;
+                linkDiploma.href = `diplomas/${usuario.curso}.pdf`; // Agrega diplomas por curso
+            }
+        });
+    </script>
+</body>
+</html>
